@@ -1,5 +1,9 @@
 import React from "react"
 
+const imageArr = [
+  
+]
+
 function imageCard(props) {
   return (
     <div className="img-container"
