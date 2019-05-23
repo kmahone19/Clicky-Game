@@ -5,48 +5,48 @@ import ImageCard from './components/imageCard/imageCard';
 const imageArr = [
   {
     id: 1,
-    image: "",
-    name: ""
+    image: "./images/",
+    name: "Ryu"
   },
   {
     id: 2,
-    image: "",
-    name: ""
+    image: "./images/",
+    name: "Akuma"
   },
   {
     id: 3,
-    image: "",
-    name: ""
+    image: "./images/",
+    name: "Cammy"
   },
   {
     id: 4,
-    image: "",
-    name: ""
+    image: "./images/",
+    name: "Dhalsim"
   },
   {
     id: 5,
-    image: "",
-    name: ""
+    image: "./images/",
+    name: "Guile"
   },
   {
     id: 6,
-    image: "",
-    name: ""
+    image: "./images/",
+    name: "Ken"
   },
   {
     id: 7,
-    image: "",
-    name: ""
+    image: "./images/",
+    name: "M Bison"
   },
   {
     id: 8,
-    image: "",
-    name: ""
+    image: "./images/",
+    name: "Sagat"
   },
   {
     id: 9,
-    image: "",
-    name: ""
+    image: "./images/",
+    name: "Zangief"
   }
 ]
 
@@ -60,7 +60,9 @@ class App extends React.Component {
 
   handleIamgeClick = () => {
 
+    
     if (this.state.imgList.clicked) {
+      this.setState(this.state.imgList.clicked = false)
       this.setState({ count: this.state.count + 1 });
       this.handleHighScores();
       this.shuffleCards();
