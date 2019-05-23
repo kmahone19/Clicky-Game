@@ -3,13 +3,13 @@ import React from "react"
 const style = {
   header: {
     background: "purple",
-   
+
   },
   h1: {
-   
+
     textAlign: "left",
     color: "white",
-   
+
   },
   div: {
     color: "white",
@@ -17,7 +17,7 @@ const style = {
     textDecoration: "none",
     margin: "5px",
     lineHeight: 3,
-    
+
   }
 }
 
@@ -27,7 +27,7 @@ function Header(props) {
       <h1 style={style.h1}>Clicky Game</h1>
       <p className="float-right" style={style.div}>Current Score: {props.count} || High Score: {props.high} </p>
     </div>
-      )
+  )
 }
 
 export default Header
