@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "image": "./images/ryu.jpg",
+    "name": "Ryu"
+  },
+  {
+    "id": 2,
+    "image": "./images/akuma.jpg",
+    "name": "Akuma"
+  },
+  {
+    "id": 3,
+    "image": "./images/ehonda.png",
+    "name": "Ehonda"
+  },
+  {
+    "id": 4,
+    "image": "./images/blanka.jpg",
+    "name": "Blanka"
+  },
+  {
+    "id": 5,
+    "image": "./images/cammy.png",
+    "name": "Cammy"
+  },
+  {
+    "id": 6,
+    "image": "./images/ken.png",
+    "name": "Ken"
+  },
+  {
+    "id": 7,
+    "image": "./images/bison.jpg",
+    "name": "M Bison"
+  },
+  {
+    "id": 8,
+    "image": "./images/vega.jpg",
+    "name": "Vega"
+  },
+  {
+    "id": 9,
+    "image": "./images/alex.jpg",
+    "name": "Alex"
+  }
+]

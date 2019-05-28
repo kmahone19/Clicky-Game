@@ -5,48 +5,48 @@ import ImageCard from './components/imageCard/imageCard';
 const imageArr = [
   {
     id: 1,
-    image: "./images/",
+    image: "./images/ryu.jpg",
     name: "Ryu"
   },
   {
     id: 2,
-    image: "./images/",
+    image: "./images/akuma.jpg",
     name: "Akuma"
   },
   {
     id: 3,
-    image: "./images/",
-    name: "Cammy"
+    image: "./images/ehonda.png",
+    name: "Ehonda"
   },
   {
     id: 4,
-    image: "./images/",
-    name: "Dhalsim"
+    image: "./images/blanka.jpg",
+    name: "Blanka"
   },
   {
     id: 5,
-    image: "./images/",
-    name: "Guile"
+    image: "./images/cammy.png",
+    name: "Cammy"
   },
   {
     id: 6,
-    image: "./images/",
+    image: "./images/ken.png",
     name: "Ken"
   },
   {
     id: 7,
-    image: "./images/",
+    image: "./images/bison.jpg",
     name: "M Bison"
   },
   {
     id: 8,
-    image: "./images/",
-    name: "Sagat"
+    image: "./images/vega.jpg",
+    name: "Vega"
   },
   {
     id: 9,
-    image: "./images/",
-    name: "Zangief"
+    image: "./images/alex.jpg",
+    name: "Alex"
   }
 ]
 
@@ -55,26 +55,27 @@ class App extends React.Component {
   state = {
     count: 0,
     imgList: imageArr,
-    high: 0
+    high: 0,
+    clicked:[]
   }
 
-  handleIamgeClick = () => {
-
+  handleIamgeClick = (id) => {
+    console.log(this.state.clicked)
     
-    if (this.state.imgList.clicked) {
-      this.setState(this.state.imgList.clicked = false)
+    if (this.state.clicked.includes(id)) {
+      this.setState({ count: 0 });
+      this.shuffleCards();
+      this.setState({clicked: []})
+    } else {
       this.setState({ count: this.state.count + 1 });
       this.handleHighScores();
       this.shuffleCards();
-    } else if (!this.state.imgList.clicked) {
-      this.setState({ count: 0 });
-      this.shuffleCards();
+      this.state.clicked.push(id)
     }
   };
 
   shuffleCards = () => {
     const shuffledImgList = this.state.imgList.sort(() => 0.5 - Math.random());
-
     this.setState({
       imgList: shuffledImgList
     });
@@ -94,7 +95,7 @@ class App extends React.Component {
           {
             this.state.imgList.map(image => {
               return (
-                <ImageCard image={image.image} handleIamgeClick={this.handleIamgeClick} key={image.id} name={image.name} />
+                <ImageCard id={image.id} image={image.image} handleIamgeClick={this.handleIamgeClick} key={image.id} name={image.name} clicked="false" />
               )
             })
           }
