@@ -68,9 +68,11 @@ class App extends React.Component {
       this.setState({clicked: []})
     } else {
       this.setState({ count: this.state.count + 1 });
-      this.handleHighScores();
       this.shuffleCards();
       this.state.clicked.push(id)
+    }
+    if(this.state.count === this.state.high){
+      
     }
   };
 
@@ -80,12 +82,6 @@ class App extends React.Component {
       imgList: shuffledImgList
     });
   };
-
-  handleHighScores = () => {
-    if (this.state.count === this.state.high) {
-      this.setState({ high: this.state.count })
-    }
-  }
 
   render() {
     return (
