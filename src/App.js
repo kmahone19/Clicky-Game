@@ -71,11 +71,8 @@ class App extends React.Component {
       this.shuffleCards();
       this.state.clicked.push(id)
     }
-    if(this.state.count === this.state.high){
-      console.log("this works")
-      this.setState({
-        high: this.state.count
-      })
+    if(this.state.count === 9){
+      return alert("You Win!")
     }
   };
 
