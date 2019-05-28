@@ -15,17 +15,17 @@ const imageArr = [
   },
   {
     id: 3,
-    image: "./images/ehonda.png",
-    name: "Ehonda"
+    image: "./images/chunli.jpg",
+    name: "Chun Li"
   },
   {
     id: 4,
-    image: "./images/blanka.jpg",
-    name: "Blanka"
+    image: "./images/guile.png",
+    name: "Guile"
   },
   {
     id: 5,
-    image: "./images/cammy.png",
+    image: "./images/Cammy.jpg",
     name: "Cammy"
   },
   {
@@ -45,8 +45,8 @@ const imageArr = [
   },
   {
     id: 9,
-    image: "./images/alex.jpg",
-    name: "Alex"
+    image: "./images/sagat.jpg",
+    name: "Sagat"
   }
 ]
 
@@ -55,7 +55,7 @@ class App extends React.Component {
   state = {
     count: 0,
     imgList: imageArr,
-    high: 0,
+    high: 9,
     clicked:[]
   }
 
@@ -72,7 +72,10 @@ class App extends React.Component {
       this.state.clicked.push(id)
     }
     if(this.state.count === this.state.high){
-      
+      console.log("this works")
+      this.setState({
+        high: this.state.count
+      })
     }
   };
 
@@ -84,10 +87,21 @@ class App extends React.Component {
   };
 
   render() {
+    const style = {
+      wrapper: {
+        height: "100%",
+        display: "flex",
+        flexFlow: "row wrap",
+        padding: "25px 0 50px",
+        justifyContent: "space-around",
+        alignContent: "flex-start"
+      }
+    }
     return (
       <div>
         <Header count={this.state.count} high={this.state.high} />
         <div className="container">
+          <div className="row" style={style.wrapper}>
           {
             this.state.imgList.map(image => {
               return (
@@ -95,6 +109,7 @@ class App extends React.Component {
               )
             })
           }
+          </div>
         </div>
       </div>
     )

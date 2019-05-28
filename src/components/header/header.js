@@ -6,10 +6,8 @@ const style = {
 
   },
   h1: {
-
     textAlign: "left",
     color: "white",
-
   },
   div: {
     color: "white",
@@ -23,9 +21,9 @@ const style = {
 
 function Header(props) {
   return (
-    <div className="jumbotron" style={style.header}>
+    <div className="jumbotron jumbotron=fluid" style={style.header}>
       <h1 style={style.h1}>Clicky Game</h1>
-      <p className="float-right" style={style.div}>Current Score: {props.count} || High Score: {props.high} </p>
+      <p className="float-right" style={style.div}>Current Score: {props.count} || Goal Score: {props.high} </p>
     </div>
   )
 }
